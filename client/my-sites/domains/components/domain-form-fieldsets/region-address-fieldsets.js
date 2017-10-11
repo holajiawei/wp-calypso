@@ -1,5 +1,5 @@
 /**
- * External dependencies
+ * External	 dependencies
  *
  * @format
  */
@@ -51,18 +51,15 @@ function getAddressComponent( formTypesArray, key ) {
 }
 
 const RegionAddressFieldsets = ( { getFieldProps, translate, countryCode } ) => {
-	if ( countryCode ) {
-		const Component =
-			getAddressComponent( regionAddressFieldsetComponents, countryCode ) || UsAddressFields;
-		return (
-			<Component
-				getFieldProps={ getFieldProps }
-				translate={ translate }
-				countryCode={ countryCode }
-			/>
-		);
-	}
-	return null;
+	const Component =
+		getAddressComponent( regionAddressFieldsetComponents, countryCode ) || UsAddressFields;
+	return (
+		<Component
+			getFieldProps={ getFieldProps }
+			translate={ translate }
+			countryCode={ countryCode }
+		/>
+	);
 };
 
 RegionAddressFieldsets.propTypes = {
